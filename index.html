@@ -1,17 +1,118 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Property Management</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Property Management</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/homepage.css" rel="stylesheet">
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
+
+    <!-- Material Design fonts -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
+
+
 </head>
+
 <body>
-<h1>Hello</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-lg-2 col-md-2"></div>
+            <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card">
+                <div class="panel panel-info">
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1250 sqft</p>
+                    </div>
+                    <img class="img-responsive" src="images/plan_7.png" alt="">
+                    <div>
+                        <div class="caption">
+                            <br>
+                            <p class="center startfont">Starting at <strong class="price">$1,825.00</strong><sup>\month</sup>
+                            </p>
+                            <p class="center">3 Available</p>
+                            <div class="text-center">
+                                <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-lg-3 col-md-3 bed_1 card">
+                <div class="panel panel-success">
+                    <div class="panel-body text-center">
+                        <p class="lead" style="font-size:18px">1 Bed - 2 Bath | 1250 sqft</p>
+                    </div>
+                    <img class="img-responsive" src="images/plan_8.png" alt="">
+                    <div>
+                        <div class="caption">
+                            <br>
+                            <p class="center startfont">Starting at <strong class="price">$1,825.00</strong><sup>\month</sup>
+                            </p>
+                            <p class="center">3 Available</p>
+                            <div class="text-center">
+                                <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card">
+
+                <div class="panel-body text-center">
+                    <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1250 sqft</p>
+                </div>
+                <div>
+                    <img class="img-responsive" src="images/plan_9.png" alt="">
+                </div>
+                <div>
+                    <div class="caption">
+                        <br>
+                        <p class="center startfont">Starting at <strong class="price">$1,825.00</strong><sup>\month</sup>
+                        </p>
+                        <p class="center">3 Available</p>
+                        <div class="text-center">
+                            <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a class="pull-right" data-toggle="collapse" href="#collapse1">Filter</a>
+              </h4>
+              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
+                <div class="btn-group mr-2" role="group" aria-label="First group" >
+                  <button type="button" class="btn" value=".studio">Studio</button>
+                  <button type="button" class="btn" value=".bed_1">1</button>
+                  <button type="button" class="btn" value=".bed_2">2</button>
+                </div>
+              </div>
+            </div>
+            
+            <div id="collapse1" class="panel-collapse collapse">
+                <div class="panel-body" >
+                </div>
+                <div class="panel-footer">
+                    <button class="btn" id="cancle">Cancel</button>
+                    <button class="btn" id="apply">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

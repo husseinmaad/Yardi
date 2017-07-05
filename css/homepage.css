@@ -1,0 +1,41 @@
+.price{
+  font-size: 15px;
+  color: #2185ef;
+
+}
+.startfont{
+  font-size: 12px;
+}
+.center{
+  text-align: center;
+}
+
+.card_content{
+  padding: 20px;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.img_size {
+  width:180px;
+  height:150px;
+}
+
+.panel{
+  border: 0px;
+
+}
+.card{
+  margin: 5px;
+}
+button{
+  border: 1px solid black;
+}
+
+
+
+
+
+

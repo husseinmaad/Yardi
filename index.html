@@ -1,118 +1,401 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Property Management</title>
+    <!-- Material Design fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <!--    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery UI Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <!-- Bootstrap Material Design -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/homepage.css" rel="stylesheet">
-
-    <!-- jQuery library -->
+    <!-- jQuery /UI library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/homepage.js"></script>
-
-    <!-- Material Design fonts -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-
-    <!-- Bootstrap Material Design -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/FezVrasta/bootstrap-material-design/dist/dist/bootstrap-material-design.min.css">
-
-
-</head>
-
-<body>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2 col-lg-2 col-md-2"></div>
-            <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card">
-                <div class="panel panel-info">
-                    <div class="panel-body text-center">
-                        <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1250 sqft</p>
-                    </div>
-                    <img class="img-responsive" src="images/plan_7.png" alt="">
-                    <div>
-                        <div class="caption">
-                            <br>
-                            <p class="center startfont">Starting at <strong class="price">$1,825.00</strong><sup>\month</sup>
-                            </p>
-                            <p class="center">3 Available</p>
-                            <div class="text-center">
-                                <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Anmiate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="css/homepage.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container" >
+      <!-- First ROW -->
+      <div class="row">
+        <div class="col-sm-2 col-lg-2 col-md-2"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3 studio card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">Studio | 850 sqft</p>
             </div>
-            <div class="col-sm-3 col-lg-3 col-md-3 bed_1 card">
-                <div class="panel panel-success">
-                    <div class="panel-body text-center">
-                        <p class="lead" style="font-size:18px">1 Bed - 2 Bath | 1250 sqft</p>
-                    </div>
-                    <img class="img-responsive" src="images/plan_8.png" alt="">
-                    <div>
-                        <div class="caption">
-                            <br>
-                            <p class="center startfont">Starting at <strong class="price">$1,825.00</strong><sup>\month</sup>
-                            </p>
-                            <p class="center">3 Available</p>
-                            <div class="text-center">
-                                <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card">
-
-                <div class="panel-body text-center">
-                    <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1250 sqft</p>
-                </div>
-                <div>
-                    <img class="img-responsive" src="images/plan_9.png" alt="">
-                </div>
-                <div>
-                    <div class="caption">
-                        <br>
-                        <p class="center startfont">Starting at <strong class="price">$1,825.00</strong><sup>\month</sup>
-                        </p>
-                        <p class="center">3 Available</p>
-                        <div class="text-center">
-                            <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="panel-group">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a class="pull-right" data-toggle="collapse" href="#collapse1">Filter</a>
-              </h4>
-              <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" >
-                <div class="btn-group mr-2" role="group" aria-label="First group" >
-                  <button type="button" class="btn" value=".studio">Studio</button>
-                  <button type="button" class="btn" value=".bed_1">1</button>
-                  <button type="button" class="btn" value=".bed_2">2</button>
+            <img class="img-responsive" src="images/plan_1.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,200.00</bdi><sup>/month</sup></p>
+                <p class="center custom_lable">Inquire for details</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
                 </div>
               </div>
             </div>
-            
-            <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body" >
-                </div>
-                <div class="panel-footer">
-                    <button class="btn" id="cancle">Cancel</button>
-                    <button class="btn" id="apply">Apply</button>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_1 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">1 Bed - 1 Bath | 850 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_2.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,650.00</bdi><sup>/month</sup></p>
+                <p class="center custom_lable">3 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_3 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">3 Bed - 2 Bath | 1250 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_3.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,825.00</bdi><sup>/month</sup>
+                </p>
+                <p class="center custom_lable">9 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END FIRST ROW -->
+      <!-- Second Row -->
+      <div class="row">
+        <div class="col-sm-2 col-lg-2 col-md-2 "></div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 7211 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_4.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$4,000.00</bdi><sup>/month</sup></p>
+                <p class="center custom_lable">Available On: 9/15/2016</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1000 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_5.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,525.00</bdi><sup>/month</sup></p>
+                <p class="center custom_lable">2 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_3 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">3 Bed - 2 Bath | 1250 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_6.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,825.00</bdi><sup>/month</sup>
+                </p>
+                <p class="center custom_lable">5 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SECOND ROW -->
+      <!-- Third ROW -->
+      <div class="row">
+        <div class="col-sm-2 col-lg-2 col-md-2"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1250 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_7.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,825.00</bdi><sup>/month</sup>
+                </p>
+                <p class="center custom_lable">3 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_1 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">1 Bed - 2 Bath | 1250 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_8.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,825.00</bdi><sup>/month</sup>
+                </p>
+                <p class="center custom_lable">1 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_2 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">2 Bed - 2 Bath | 1250 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_9.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,825.00</bdi><sup>/month</sup>
+                </p>
+                <p class="center custom_lable">7 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Third ROW -->
+      <!-- Fourth ROW -->
+      <div class="row">
+        <div class="col-sm-2 col-lg-2 col-md-2"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_1 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">1 Bed - 1 Bath | 1250 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_10.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$1,825.00</bdi><sup>/month</sup></p>
+                <p class="center custom_lable">1 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 bed_3 card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">3 Bed - 3 Bath | 2150 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_11.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$2,825.00</bdi><sup>/month</sup>
+                </p>
+                <p class="center custom_lable">4 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-lg-3 col-md-3 studio card animated fadeInLeft">
+          <div class="card-block">
+            <div class="panel-body text-center">
+              <p class="lead" style="font-size:18px">Studio | 200 sqft</p>
+            </div>
+            <img class="img-responsive" src="images/plan_12.png" alt="">
+            <div>
+              <div class="caption">
+                <br>
+                <p class="center custom_lable">Starting at <bdi>$525.00</bdi><sup>/month</sup></p>
+                <p class="center custom_lable">3 Available Now</p>
+                <div class="text-center">
+                  <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Fourth ROW -->
     </div>
-</body>
+    <!-- End Container -->
+    <!-- Filter -->
+    <nav class="navbar-fixed-bottom card">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading ">
+            <h4 class="panel-title">
+              <a class="pull-right" data-toggle = "collapse" data-parent = "#accordion" href = "#collapseTwo">
+              <i class="fa fa-filter" aria-hidden="true"></i> Filter
+              </a>
+            </h4>
+            <div class="row">
+              <div class="col-sm-3 col-lg-3 col-md-3 display">
+                <label><i class="fa fa-bed" aria-hidden="true"></i> BEDROOMS</label>
+                <div class="btn-group btn-group.btn-group-justified.btn-group-raised" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-primary btn-lg" value=".studio">Studio</button>
+                  <button type="button" class="btn btn-primary btn-lg" value=".bed_1">1</button>
+                  <button type="button" class="btn btn-primary btn-lg" value=".bed_2">2</button>
+                  <button type="button" class="btn btn-primary btn-lg" value=".bed_3">3+</button>
+                </div>
+              </div>
+              <div class="col-sm-4 col-lg-4 col-md-4  display">
+                <label><i class="fa fa-money" aria-hidden="true"></i> RENT</label>
+                <br>
+                <div id="slider-range" ></div>
+                <div class="row">
+                  <div class="col-sm-11 col-lg-11 col-md-11">
+                    <label id="amount"  ></label>
+                  </div>
+                  <div class="col-sm-1 col-lg-1 col-md-1">
+                    <label id="amount2"></label>
+                  </div>
 
+                </div>
+              </div>
+              <div class="col-sm-3 col-lg-3 col-md-3 display">
+                <label><i class="fa fa-calendar" aria-hidden="true"></i> MOVE IN DATE</label>
+                <br>
+                <input id="datetimepicker1" type='text' class="form-control" />
+              </div>
+            </div>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-3 col-lg-3 col-md-3 display">
+                  <label><i class="fa fa-shower" aria-hidden="true"></i> BATHROOMS</label>
+                  <div class="btn-group btn-group.btn-group-justified.btn-group-raised" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-primary btn-lg " value=".studio">ANY</button>
+                    <button type="button" class="btn btn-primary btn-lg " value=".bed_1">1+</button>
+                    <button type="button" class="btn btn-primary btn-lg " value=".bed_2">2+</button>
+                    <button type="button" class="btn btn-primary btn-lg" value=".bed_3">3+</button>
+                  </div>
+                </div>
+                <div class="col-sm-4 col-lg-4 col-md-4 display">
+                  <label><i class="fa fa-square" aria-hidden="true"></i> SQFT</label>
+                  <br>
+                  <div id="slider-range1"></div>
+                  <div class="row">
+                    <div class="col-sm-11 col-lg-11 col-md-11">
+                      <label id="amo1"></label>
+                    </div>
+                    <div class="col-sm-1 col-lg-1 col-md-1">
+                      <label id="amo2"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-3 col-lg-3 col-md-3">
+                  <label><i class="fa fa-plus" aria-hidden="true"></i> AMENITE</label>
+                  <br>
+                  <div class="row">
+                    <div class="col-sm-6 col-lg-6 col-md-6">   
+                      <label class="form-check-label custom_lable">
+                      <input class="form-check-input" type="checkbox" value="">  AIR CONDITIONING
+                      </label>
+                      <label class="form-check-label custom_lable">
+                      <input class="form-check-input" type="checkbox" value="">  ASSIGNED PARKING
+                      </label>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 col-md-6">   
+                      <label class="form-check-label custom_lable">
+                      <input class="form-check-input" type="checkbox" value="">  BALCONY
+                      </label>
+                      <label id="carpet" class="form-check-label custom_lable">
+                      <input class="form-check-input" type="checkbox" value="">  CARPET
+                      </label>
+                      <a id = "more" href="#more_check" data-toggle="collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</a>
+                    </div>
+
+                  </div>
+                  <div id="more_check" class="collapse">
+                    <div class="row">
+                      <div class="col-sm-6 col-lg-6 col-md-6">   
+                        <label class="form-check-label custom_lable">
+                        <input class="form-check-input" type="checkbox" value=""> SWIMMING POOL
+                        </label>
+                        <label class="form-check-label custom_lable">
+                        <input class="form-check-input" type="checkbox" value=""> WIRELESS INTERNET
+                        </label>
+                        <label class="form-check-label custom_lable">
+                        <input class="form-check-input" type="checkbox" value=""> HOT COFFEE
+                        </label>
+                      </div>
+                      <div class="col-md-6 less">   
+                        <label class="form-check-label custom_lable">
+                        <input class="form-check-input" type="checkbox" value=""> FIREPLACE
+                        </label>
+                        <label class="form-check-label custom_lable">
+                        <input class="form-check-input" type="checkbox" value=""> CABLE TELEVISION
+                        </label>
+                        <label class="form-check-label custom_lable">
+                        <input class="form-check-input" type="checkbox" value=""> TENNIS COURTS
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer text-center">
+              <button class="btn" id="cancle">Cancel</button>
+              <button class="btn" id="apply">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END Filter -->       
+  </body>
 </html>

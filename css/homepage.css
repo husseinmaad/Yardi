@@ -1,8 +1,8 @@
-.price{
-  font-size: 15px;
-  color: #2185ef;
-
+body {
+    font-family: 'Roboto';
+    font-size: 22px;
 }
+
 .startfont{
   font-size: 12px;
 }
@@ -30,12 +30,24 @@ sup {
 .card{
   margin: 5px;
 }
-button{
-  border: 1px solid black;
+
+
+.display, label {
+    display:block;
 }
 
+.custom_lable{
+  color: #A2A2A2;
+  font-size: 9px;
+}
+bdi {
+  font-size: 17px;
+  color: #2185ef;
+}
 
-
-
-
+.card_test {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
 

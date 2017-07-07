@@ -60,7 +60,7 @@ bdi {
     margin: 20px 30px;
     right: 0;
     color: #2185ef;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 @media only screen and (max-width: 425px) {
@@ -106,8 +106,7 @@ bdi {
 #reset-link {
     position: absolute;
     margin: 20px 30px;
-    right: 0;
-    bottom: 70px; 
+    right: 100px;
     color: #2185ef;
     font-size: 10px;
 }

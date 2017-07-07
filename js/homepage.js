@@ -2,7 +2,6 @@
   $( document ).ready(function() {
     
     var selected_button; 
-    var mainBodyContent = $('body').html(); 
 
     $(".btn-group").on('click', function(e){
       e.preventDefault();
@@ -58,9 +57,9 @@
     max: 4000,
     values: [ 400, 4000 ],
     slide: function( event, ui ) {
-      $( "#amo1" ).text( ui.values[ 0 ] );
-      $( "#amo2" ).text( ui.values[ 1 ] );
-
+      // $( "#amo1" ).text( ui.values[ 0 ] );
+      // $( "#amo2" ).text( ui.values[ 1 ] );
+      
     }
   });
 
@@ -81,7 +80,7 @@
     var min = Number($( "#amount" ).text());
     var max = Number($( "#amount2" ).text());
     var arr_card = []
-    filter_check(components)
+    filter_check(components);
       for(var i =0; i<components.length; i++){ 
 
         var priceElement = $(components[i]).find('bdi')
@@ -96,9 +95,11 @@
     }
   });
 
-more_less_check()
+  more_less_check();
+
 
 });
+// End of Document
 
 var filter_check = function(input){
   for (var i =0;i < input.length; i++) {
@@ -125,7 +126,7 @@ var more_less_check = function(){
 }
 
 var resetAll= function(){
-  
+ location.reload();
 }
 
 

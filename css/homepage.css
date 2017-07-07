@@ -31,11 +31,6 @@ sup {
     padding: 10px 15px;
 }
 
-#filter-link {
-    position: absolute;
-    margin: 20px 30px;
-    right: 0;
-}
 
 .display, label {
     display:block;
@@ -60,9 +55,14 @@ bdi {
   margin-bottom: 120px;
 }
 
-#filter-link{
-  color: #2185ef;
+#filter-link {
+    position: absolute;
+    margin: 20px 30px;
+    right: 0;
+    color: #2185ef;
+    font-size: 10px;
 }
+
 @media only screen and (max-width: 425px) {
    #filter-link {
     position: static;
@@ -101,4 +101,13 @@ bdi {
 .btn-group>.btn
 {
   color: #757779; 
+}
+
+#reset-link {
+    position: absolute;
+    margin: 20px 30px;
+    right: 0;
+    bottom: 70px; 
+    color: #2185ef;
+    font-size: 10px;
 }

@@ -2,7 +2,7 @@
   $( document ).ready(function() {
     
     var selected_button; 
-    
+    var mainBodyContent = $('body').html(); 
 
     $(".btn-group").on('click', function(e){
       e.preventDefault();
@@ -124,8 +124,9 @@ var more_less_check = function(){
   })
 }
 
-// var filter_nav = $('#filter-nav').height();
-// $('#content').css('margin-bottom', filter_nav);
+var resetAll= function(){
+  
+}
 
 
 

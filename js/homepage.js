@@ -1,15 +1,28 @@
 
   $( document ).ready(function() {
     
-    var selected_button 
+    var selected_button; 
     
 
     $(".btn-group").on('click', function(e){
       e.preventDefault();
        console.log(e.target.value)
+       // $('.btn-group .active').removeClass('active')
+       // $(e.target).addClass('active')
       selected_button = e.target.value;
-      $('.card').hide();
-      $(selected_button).fadeTo(400, 1);
+      
+      var cards = $(selected_button);
+      console.log(cards)
+      // 
+      var newContent = '<div class="row">';
+      for(var i =0; i < cards.length; i++){
+        newContent+= '<div class = "col-sm-4 col-lg-4 col-md-4 ' +selected_button+ ' animated fadeInLeft">'
+        newContent+= $(cards[i]).html();
+        newContent+= '</div>';
+      }
+      newContent+= '</div>';
+      $('#content .row').hide();
+      $(newContent).appendTo('#content');
       $('.navbar-fixed-bottom').show();
     })
 
@@ -110,6 +123,9 @@ var more_less_check = function(){
     }
   })
 }
+
+// var filter_nav = $('#filter-nav').height();
+// $('#content').css('margin-bottom', filter_nav);
 
 
 

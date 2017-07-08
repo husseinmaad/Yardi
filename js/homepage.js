@@ -129,8 +129,7 @@ var more_less_check = function(){
 // More Filter link
 var more_filter = function(){
   $('#filter-link').on('click',function(){
-    console.log("asdasdasd")
-    $('#title-filter').removeClass( "hidden" )
+    $('#title-filter').removeClass("hidden")
     $('#title-filter').show();
   });
 }

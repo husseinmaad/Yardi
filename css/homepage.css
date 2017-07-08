@@ -110,7 +110,8 @@ bdi {
     color: #2185ef;
     font-size: 10px;
 }
-
-#title-filter{
-  font-size: 1px;
+#title-filter {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 25px;
 }

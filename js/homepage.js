@@ -132,10 +132,10 @@ var more_filter = function(){
     $('#title-filter').removeClass("hidden")
     $('#title-filter').show();
     $('#filter-link').hide();
-    $('#reset-link').addClass("reset-link-after-change")
+    $('#reset-link').addClass("reset-link-after-change");
+    $('#content').css({'margin-bottom': '320px'});
   });
 }
-
 // Reset all the homepage
 var resetAll= function(){
  location.reload();

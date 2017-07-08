@@ -65,6 +65,8 @@ bdi {
     font-size: 12px;
 }
 
+
+
 @media only screen and (max-width: 425px) {
     #filter-link {
         position: static;
@@ -74,15 +76,19 @@ bdi {
         text-align: center;
     }
     p.location {
-    font-size: 16px;
-    color: #824339;
+    font-size: 18px;
+    color: #946460;
     margin-bottom: 0px;
     font-weight: 300;
   }
   p.lead{
-    font-size:22px;
+    font-size:28px;
+    color: #634e42; font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
   }
 }
+
+
 
 .btn {
     border-radius: 0;
@@ -148,4 +154,9 @@ bdi {
     color: #828989;
     margin-bottom: 0px;
     font-weight: 300;
+}
+.pipe {
+    color: #A2A2A2;
+    margin-left: 6px;
+    margin-right: 6px;
 }

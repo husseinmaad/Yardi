@@ -131,6 +131,8 @@ var more_filter = function(){
   $('#filter-link').on('click',function(){
     $('#title-filter').removeClass("hidden")
     $('#title-filter').show();
+    $('#filter-link').hide();
+    $('#reset-link').addClass("reset-link-after-change")
   });
 }
 

@@ -54,6 +54,7 @@ bdi {
 
 #content {
     margin-bottom: 120px;
+    margin-top: 30px;
 }
 
 #filter-link {
@@ -84,9 +85,6 @@ bdi {
     color: white;
 }
 
-#more {
-    margin-top: 20px;
-}
 
 .special-banner {
     position: absolute;

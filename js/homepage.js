@@ -111,9 +111,9 @@ var filter_check = function(input) {
 // change the more <=> less 
 var more_less_check = function() {
     var icon = '<i class="fa fa-chevron-down" aria-hidden="true"></i>'
-    $('#more').on('click', function() {
-        var link = $('#more')
-        if ($('#more')[0].innerText == " More") {
+    $('#more-link').on('click', function() {
+        var link = $('#more-link')
+        if ($('#more-link')[0].innerText == " More") {
 
             $('.less').append(link.html('<i class="fa fa-chevron-up" aria-hidden="true"></i>' + " Less"))
 

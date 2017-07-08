@@ -97,7 +97,7 @@
 
   more_less_check();
 
-
+  more_filter();
 });
 // End of Document
 
@@ -107,6 +107,7 @@ var filter_check = function(input){
    }
 }
 
+// change the more <=> less 
 var more_less_check = function(){
   var icon = '<i class="fa fa-chevron-down" aria-hidden="true"></i>'
   $('#more').on('click',function(){
@@ -125,9 +126,27 @@ var more_less_check = function(){
   })
 }
 
+// More Filter link
+var more_filter = function(){
+  $('#filter-link').on('click',function(){
+    console.log("asdasdasd")
+    $('#title-filter').removeClass( "hidden" )
+    $('#title-filter').show();
+  });
+}
+
+// Reset all the homepage
 var resetAll= function(){
  location.reload();
 }
+// Google Map
 
-
+function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.2),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+}
 

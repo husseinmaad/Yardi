@@ -23,7 +23,10 @@
       <script type="text/javascript" src="js/homepage.js"></script>
       <!-- Anmiate CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
       <link href="css/homepage.css" rel="stylesheet">
+
+
    </head>
    <body>
       <div id="content" class="container" >
@@ -280,9 +283,10 @@
                            <br>
                            <p class="center custom_lable">Starting at <bdi>$525.00</bdi><sup>/month</sup></p>
                            <p class="center custom_lable">3 Available Now</p>
-                           <div class="text-center">
-                              <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
-                           </div>
+                             <div class="text-center">
+                                <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                                <button type="button" style="background-color: #efefef;" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Map</button>
+                             </div>
                         </div>
                      </div>
                   </div>
@@ -298,6 +302,7 @@
             <div class="panel panel-default">
                <div class="panel-heading ">
                   <h4 class="panel-title">
+                      <div><h4 id="title-filter"  class="hidden">Filter</h4></div>
                       <a id="reset-link" class="hidden-xs" href="#" onClick="resetAll()">
                          <i class="fa fa-times-circle" aria-hidden="true"></i> Reset All
                       </a>
@@ -419,6 +424,30 @@
             </div>
          </div>
       </nav>
-      <!-- END Filter -->       
+      <!-- END Filter -->    
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+             <div id="map" style="width:400px;height:400px;background:yellow"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>   
    </body>
+
+  <!-- Map -->
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1wYBQWDjquHDBGVpWHP95Iej2yHSlPPU&callback=myMap"></script>
+
 </html>

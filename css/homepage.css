@@ -73,6 +73,12 @@ bdi {
     .panel-title {
         text-align: center;
     }
+    p.location {
+    font-size: 16px;
+    color: #824339;
+    margin-bottom: 0px;
+    font-weight: 300;
+}
 }
 
 .btn {
@@ -127,4 +133,16 @@ bdi {
 /*fix the color because its inherit the original color */
 .panel-title>a{
     color: #2185ef;
+}
+
+.lead{
+  font-size:18px;
+  margin-bottom: 5px;
+}
+
+.location{
+    font-size: 13px;
+    color: #828989;
+    margin-bottom: 0px;
+    font-weight: 300;
 }

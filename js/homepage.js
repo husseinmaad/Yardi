@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     var selected_button;
+    mobileFliterHandler();
 
     $(".btn-group").on('click', function(e) {
         e.preventDefault();
@@ -96,9 +97,11 @@ $(document).ready(function() {
         }
     });
 
-    more_less_check();
+    moreLessCheck();
 
-    more_filter();
+    moreFilterLink();
+
+    applyBtn();
 });
 // End of Document
 
@@ -109,7 +112,7 @@ var filter_check = function(input) {
 }
 
 // change the more <=> less 
-var more_less_check = function() {
+var moreLessCheck = function() {
     var icon = '<i class="fa fa-chevron-down" aria-hidden="true"></i>'
     $('#more-link').on('click', function() {
         var link = $('#more-link')
@@ -127,7 +130,7 @@ var more_less_check = function() {
 }
 
 // More Filter link
-var more_filter = function() {
+var moreFilterLink = function() {
     $('#filter-link').on('click', function() {
         $('#title-filter').removeClass("hidden")
         $('#title-filter').show();
@@ -147,11 +150,44 @@ var resetAll = function() {
 
 // Google Map
 
-function myMap() {
+var myMap = function() {
     var mapCanvas = document.getElementById("map");
     var mapOptions = {
         center: new google.maps.LatLng(51.5, -0.2),
         zoom: 10
     };
     var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+
+// Mobile filter handling
+
+var mobileFliterHandler = function(){
+  var windowWidth = $( window ).width()
+  if (windowWidth <= 420) {
+    var newFliterName = '<i class="fa fa-filter fa-2x" aria-hidden="true"> FILTER</i> '
+    $('#filter-link').html(newFliterName)
+
+    $('#filter-link').on('click',function(){
+    $('#fixed-filter').removeClass('hidden-xs')
+
+    $('#cancel-btn').on('click',function(e){
+        e.preventDefault();
+        resetAll();
+      });
+
+    });
+
+  }else{console.log('above 1000')}
+}
+
+var applyBtn = function(){
+  $('#apply-btn').on('click',function(e){
+    e.preventDefault();
+    $('#extendFilter').removeClass('panel-collapse collapse in');
+    $('#extendFilter').addClass('panel-collapse collapse');
+    $('#filter-link').show()
+    $('#reset-link').removeClass("reset-link-after-change");
+    $('#reset-link').addClass("reset-link-before-change");
+    $('#title-filter').hide();
+  })
 }

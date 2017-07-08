@@ -85,20 +85,25 @@ label {
     font-weight: 300;
   }
   p.lead{
-    font-size:28px;
+    font-size:20px;
     color: #634e42; 
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
   }
   p.price{
    color: #A2A2A2;
-   font-size: 15px;
+   font-size: 13px;
   }
   bdi.price-number {
     font-size: 20px;
     color: #2185ef;
     font-weight: 100;
-    font-family: "Lucida Console", Monaco, monospace;
+  }
+  .btn{
+    width: 130px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: lighter;
   }
 }
 

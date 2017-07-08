@@ -102,7 +102,13 @@ bdi {
     color: #757779;
 }
 
-#reset-link {
+#title-filter {
+    font-size: 15px;
+    font-weight: lighter;
+    margin-bottom: 25px;
+}
+
+.reset-link-before-change{
     position: absolute;
     margin: 20px 30px;
     right: 100px;
@@ -110,17 +116,15 @@ bdi {
     font-size: 10px;
 }
 
-#title-filter {
-    font-size: 15px;
-    font-weight: lighter;
-    margin-bottom: 25px;
-}
-
 .reset-link-after-change{
     position: absolute;
     margin: 20px 30px;
-    right: 50px;
-    top: 20px;
+    right: 10px;
+    top: 0px;
     color: #2185ef;
     font-size: 10px;
+}
+/*fix the color because its inherit the original color */
+.panel-title>a{
+    color: #2185ef;
 }

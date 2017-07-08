@@ -92,7 +92,8 @@ label {
   }
   p.price{
    color: #A2A2A2;
-   font-size: 13px;
+   font-size: 14px;
+   font-weight: 100;
   }
   bdi.price-number {
     font-size: 20px;

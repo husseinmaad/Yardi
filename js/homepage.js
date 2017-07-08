@@ -3,7 +3,7 @@ $(document).ready(function() {
     var selected_button;
     mobileFliterHandler();
 
-    $(".btn-group").on('click', function(e) {
+    $(".bedroom").on('click', function(e) {
         e.preventDefault();
         console.log(e.target.value)
         // $('.btn-group .active').removeClass('active')
@@ -102,6 +102,10 @@ $(document).ready(function() {
     moreFilterLink();
 
     applyBtn();
+
+    $(".modal").on("hidden.bs.modal", function(){
+    $(".modal-body1").html("");
+});
 });
 // End of Document
 
@@ -163,7 +167,7 @@ var myMap = function() {
 
 var mobileFliterHandler = function(){
   var windowWidth = $( window ).width()
-  if (windowWidth <= 420) {
+  if (windowWidth <= 425) {
     var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> FILTER '
     $('#filter-link').html(newFliterName)
 

@@ -78,7 +78,10 @@ bdi {
     color: #824339;
     margin-bottom: 0px;
     font-weight: 300;
-}
+  }
+  p.lead{
+    font-size:22px;
+  }
 }
 
 .btn {

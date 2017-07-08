@@ -201,3 +201,50 @@ label {
    color: #A2A2A2;
    font-size: 11px;
 }
+
+
+@media only screen and (max-width: 768px) {
+    #filter-link {
+        position: static;
+        margin: 0px;
+        color: gray;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .panel-title {
+        text-align: center;
+    }
+    p.location {
+    font-size: 18px;
+    color: #946460;
+    margin-bottom: 0px;
+    font-weight: 300;
+  }
+  p.lead{
+    font-size:20px;
+    color: #634e42; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+  }
+  p.price{
+   color: #A2A2A2;
+   font-size: 14px;
+   font-weight: 100;
+  }
+  bdi.price-number {
+    font-size: 20px;
+    color: #2185ef;
+    font-weight: 100;
+  }
+  .btn-group{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+}
+.ipad-filter-div-shift{
+    position: relative;
+    left: 25px;
+}
+
+}

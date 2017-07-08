@@ -181,7 +181,21 @@ var mobileFliterHandler = function(){
 
     });
 
-  }else{console.log('above 1000')}
+  }else if (windowWidth <= 768) {
+    var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> MORE FILTER '
+    $('#filter-link').html(newFliterName)
+
+    $('#filter-link').on('click',function(){
+    $('#fixed-filter').removeClass('hidden-xs')
+
+    $('#cancel-btn').on('click',function(e){
+        e.preventDefault();
+        resetAll();
+      });
+
+    });
+
+  }
 }
 
 var applyBtn = function(){

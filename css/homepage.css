@@ -38,10 +38,10 @@ label {
 }
 .custom_lable {
     color: #A2A2A2;
-    font-size: 9px;
+    font-size: 11px;
 }
 
-bdi {
+.price-number {
     font-size: 17px;
     color: #2185ef;
 }
@@ -71,6 +71,9 @@ bdi {
     #filter-link {
         position: static;
         margin: 0px;
+        color: gray;
+        font-size: 20px;
+        font-weight: 100;
     }
     .panel-title {
         text-align: center;
@@ -83,8 +86,19 @@ bdi {
   }
   p.lead{
     font-size:28px;
-    color: #634e42; font-family: 'Open Sans', sans-serif;
+    color: #634e42; 
+    font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+  }
+  p.price{
+   color: #A2A2A2;
+   font-size: 15px;
+  }
+  bdi.price-number {
+    font-size: 20px;
+    color: #2185ef;
+    font-weight: 100;
+    font-family: "Lucida Console", Monaco, monospace;
   }
 }
 
@@ -106,12 +120,28 @@ bdi {
     right: 8px;
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    transform: rotate(22deg);
+    transform: rotate(32deg);
     border-top: 2px solid lightgrey;
     border-bottom: 2px solid lightgrey;
     font-size: 14px;
     text-align: center;
-}
+    background-color: #fffbfb;
+    border: 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 2px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    display: block;
+    margin-bottom: .75rem;
+    margin-top: 10px;
+    border-radius: .125rem;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-family: 'Kurale', sans-serif;
+    border-left-style: solid;
+    border-left-width: 15px;
+    border-left-color: cornsilk;
+    border-right-style: solid;
+    border-right-width: 15px;
+    border-right-color: cornsilk;
+}   
 
 .btn-group>.btn {
     color: #757779;
@@ -147,6 +177,7 @@ bdi {
 .lead{
   font-size:18px;
   margin-bottom: 5px;
+  margin-right: 12px;
 }
 
 .location{
@@ -159,4 +190,8 @@ bdi {
     color: #A2A2A2;
     margin-left: 6px;
     margin-right: 6px;
+}
+.price{
+   color: #A2A2A2;
+   font-size: 11px;
 }

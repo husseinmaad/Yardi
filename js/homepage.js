@@ -164,7 +164,7 @@ var myMap = function() {
 var mobileFliterHandler = function(){
   var windowWidth = $( window ).width()
   if (windowWidth <= 420) {
-    var newFliterName = '<i class="fa fa-filter fa-2x" aria-hidden="true"> FILTER</i> '
+    var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> FILTER '
     $('#filter-link').html(newFliterName)
 
     $('#filter-link').on('click',function(){

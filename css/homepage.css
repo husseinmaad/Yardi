@@ -142,7 +142,9 @@ label {
     font-size: 13px;
     color: #828989;
     margin-bottom: 0px;
-    font-weight: 300;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+
 }
 .pipe {
     color: #A2A2A2;
@@ -160,7 +162,7 @@ label {
 }
 
 /*Handle the Tablet View*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
     #filter-link {
         position: static;
         margin: 0px;
@@ -244,12 +246,13 @@ label {
   p.lead{
     font-size:20px;
     color: #634e42; 
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
   }
   p.price{
    color: #A2A2A2;
    font-size: 14px;
+   font-family: "Raleway", sans-serif;
    font-weight: 100;
   }
   bdi.price-number {
@@ -273,6 +276,15 @@ label {
     bottom: 42px;
     right: 12px;
  }
+ #filter-link{
+  color: #60300b;
+  font-weight: normal;
+ }
+ .btn.btn-primary.black{
+    color: #020202;
+    background-color: inherit;
+    border-color: #ccc;
+}
 
 div.ipad-filter-div-shift {
     position: relative;
@@ -285,14 +297,13 @@ div.ipad-filter-div-shift {
     width: 120px;
     height: 50px;
     font-size: 18px;
-    font-weight: lighter;
+   font-family: "Raleway", sans-serif;
+   font-weight: 100;
     text-transform:capitalize;
     color: rgba(72, 37, 3, 0.99);
   }
 
-
 }
 /*End of Mobile Media Query*/
-
 
 

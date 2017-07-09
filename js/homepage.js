@@ -107,6 +107,7 @@ $(document).ready(function() {
     applyBtnMobile();
 
     closeBtnMobile();
+
 });
 
 // End of Document Load
@@ -223,13 +224,13 @@ var applyBtn = function(){
 var applyBtnMobile = function(){
   var windowWidth = $( window ).width()
   if (windowWidth <= 425) {
-      console.log(windowWidth)
       $('#apply-btn').on('click',function(e){
       e.preventDefault();
+      console.log('hhhhhh')
       $('#fixed-filter').addClass('hidden-xs')
       $('#extendFilter').removeClass('panel-collapse collapse in');
       $('#extendFilter').addClass('panel-collapse collapse');
-
+      $('#close-btn').hide()
   
     })
   }

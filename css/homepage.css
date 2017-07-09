@@ -279,16 +279,17 @@ div.ipad-filter-div-shift {
     left: 0px;
   }
 
-  .btn-secondary
+  .btn.btn-secondary
   {
     background-color: #efefef;
     width: 120px;
     height: 50px;
-    font-size: 22px;
-    font-weight: 100;
+    font-size: 18px;
+    font-weight: lighter;
     text-transform:capitalize;
+    color: rgba(72, 37, 3, 0.99);
   }
-  .x {font-size: 20px;}
+
 
 }
 /*End of Mobile Media Query*/

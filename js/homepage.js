@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
     var selected_button;
-    mobileFliterHandler();
 
     $(".bedroom").on('click', function(e) {
         e.preventDefault();
@@ -97,6 +96,8 @@ $(document).ready(function() {
         }
     });
 
+    mobileFliterHandler();
+    
     moreLessCheck();
 
     moreFilterLink();
@@ -104,8 +105,13 @@ $(document).ready(function() {
     applyBtn();
 
     applyBtnMobile();
+
+    closeBtnMobile();
 });
-// End of Document
+
+// End of Document Load
+
+// Hide the component on slider check
 
 var filter_check = function(input) {
     for (var i = 0; i < input.length; i++) {
@@ -113,7 +119,8 @@ var filter_check = function(input) {
     }
 }
 
-// change the more <=> less 
+// Change the More <=> Less functionality on Click
+
 var moreLessCheck = function() {
     var icon = '<i class="fa fa-chevron-down" aria-hidden="true"></i>'
     $('#more-link').on('click', function() {
@@ -171,7 +178,7 @@ var mobileFliterHandler = function(){
 
     $('#filter-link').on('click',function(){
     $('#fixed-filter').removeClass('hidden-xs')
-
+    $('#close-btn').removeClass('hidden')
     $('#cancel-btn').on('click',function(e){
         e.preventDefault();
         resetAll();
@@ -196,7 +203,7 @@ var mobileFliterHandler = function(){
   }
 }
 
-// Apply Bottom Desktop
+// Apply Button Desktop
 var applyBtn = function(){
   $('#apply-btn').on('click',function(e){
     e.preventDefault();
@@ -208,20 +215,33 @@ var applyBtn = function(){
     $('#title-filter').hide();
   })
 }
-// Apply Bottom Mobile
+// Apply Button Mobile
 var applyBtnMobile = function(){
   var windowWidth = $( window ).width()
   if (windowWidth <= 425) {
-    console.log(windowWidth)
-    $('#apply-btn').on('click',function(e){
-    e.preventDefault();
-   $('#fixed-filter').addClass('hidden-xs')
-    $('#extendFilter').removeClass('panel-collapse collapse in');
-    $('#extendFilter').addClass('panel-collapse collapse');
+      console.log(windowWidth)
+      $('#apply-btn').on('click',function(e){
+      e.preventDefault();
+      $('#fixed-filter').addClass('hidden-xs')
+      $('#extendFilter').removeClass('panel-collapse collapse in');
+      $('#extendFilter').addClass('panel-collapse collapse');
 
   
-  })
-
+    })
   }
- 
+}
+
+// Close Button Mobile 
+
+var closeBtnMobile = function(){
+  $('#close-btn').on('click',function(e){
+    e.preventDefault();
+    console.log('asds')
+     $('#fixed-filter').addClass('hidden-xs')
+    $('#extendFilter').removeClass('panel-collapse collapse in');
+    $('#extendFilter').addClass('panel-collapse collapse');
+    $('#close-btn').addClass('hidden')
+    $('#title-filter').hide();
+    $('#filter-link').show();
+  });
 }

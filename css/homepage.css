@@ -105,7 +105,12 @@ label {
      height: 460px;
   }
      
-
+ #close-btn
+ {
+  position: relative;
+    bottom: 42px;
+    right: 12px;
+ }
 }
 /*End of Mobile Media Query*/
 

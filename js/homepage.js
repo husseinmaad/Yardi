@@ -176,9 +176,13 @@ var mobileFliterHandler = function(){
     var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> FILTER '
     $('#filter-link').html(newFliterName)
 
+    // change the view btn to see apts btn
+    $('.btn-secondary').text('See Apts') 
+
     $('#filter-link').on('click',function(){
-    $('#fixed-filter').removeClass('hidden-xs')
-    $('#close-btn').removeClass('hidden')
+    $('#fixed-filter').removeClass('hidden-xs');
+    $('#close-btn').removeClass('hidden');
+
     $('#cancel-btn').on('click',function(e){
         e.preventDefault();
         resetAll();

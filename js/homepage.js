@@ -1,204 +1,207 @@
 $(document).ready(function() {
 
-    var selected_button;
+  bedroomFilter();
 
-    $(".bedroom").on('click', function(e) {
-        e.preventDefault();
-        console.log(e.target.value)
-        // $('.btn-group .active').removeClass('active')
-        // $(e.target).addClass('active')
-        selected_button = e.target.value;
+  // Initiate the wow js
+  new WOW().init();
 
-        var cards = $(selected_button);
-        console.log(cards)
-        // 
-        var newContent = '<div class="row">';
-        for (var i = 0; i < cards.length; i++) {
-            newContent += '<div class = "col-sm-4 col-lg-4 col-md-4 ' + selected_button + ' animated fadeInLeft">'
-            newContent += $(cards[i]).html();
-            newContent += '</div>';
-        }
-        newContent += '</div>';
-        $('#content .row').hide();
-        $(newContent).appendTo('#content');
-        $('.navbar-fixed-bottom').show();
-    })
+  // Date Picker function
+  $(function() {
+    $('#datetimepicker1').datepicker();
+  });
 
-    $('#apply').on('click', function(e) {
-        e.preventDefault();
-    })
+  // Price Range Slider 
+  $("#slider-range").slider({
+    range: true,
+    min: 400,
+    max: 4000,
+    values: [400, 4000],
+    slide: function(event, ui) {
+      $("#amount").text(ui.values[0]);
+      $("#amount2").text(ui.values[1]);
+    }
+  });
 
-    $('#cancle').on('click', function(e) {
+  $("#slider-range1").slider({
+    range: true,
+    min: 400,
+    max: 4000,
+    values: [400, 4000],
+    slide: function(event, ui) {
 
-    })
+    }
+  });
 
+  $("#amount").change(function() {
 
+    $("#slider-range").slider('values', 0, $(this).val());
+  });
 
+  $("#amount2").change(function() {
+    $("#slider-range").slider('values', 1, $(this).val());
+  });
 
-    $(function() {
-        $('#datetimepicker1').datepicker();
-    });
-  
-  
-    $("#slider-range").slider({
-        range: true,
-        min: 400,
-        max: 4000,
-        values: [400, 4000],
-        slide: function(event, ui) {
-            $("#amount").text(ui.values[0]);
-            $("#amount2").text(ui.values[1]);
-            $('#test').val(ui.values[1])
-        }
-    });
-
-    $("#slider-range1").slider({
-        range: true,
-        min: 400,
-        max: 4000,
-        values: [400, 4000],
-        slide: function(event, ui) {
-            // $( "#amo1" ).text( ui.values[ 0 ] );
-            // $( "#amo2" ).text( ui.values[ 1 ] );
-
-        }
-    });
-
-    $("#amount").change(function() {
-
-        $("#slider-range").slider('values', 0, $(this).val());
-    });
-
-    $("#amount2").change(function() {
-        $("#slider-range").slider('values', 1, $(this).val());
-    });
+  // Transparent Filter
+  $('nav').fadeTo(100, 0.9);
 
 
-    $('nav').fadeTo(100, 0.9)
+  priceRangeFilter();
 
-    $("span").mouseup(function() {
-        var components = $('.container').find('.row').find('.card')
-        var min = Number($("#amount").text());
-        var max = Number($("#amount2").text());
-        var arr_card = []
-        filter_check(components);
-        for (var i = 0; i < components.length; i++) {
+  mobileFliterHandler();
 
-            var priceElement = $(components[i]).find('bdi')
-            var currency = Number(priceElement[0].innerText.replace(/[^0-9\.]+/g, ""));
+  moreLessCheck();
 
-            if (currency >= min && currency <= max) {
-                arr_card.push(components[i]);
-            }
-        }
-        for (var i = 0; i < arr_card.length; i++) {
-            $(arr_card[i]).show();
-        }
-    });
+  moreFilterLink();
 
-    mobileFliterHandler();
-    
-    moreLessCheck();
+  applyBtn();
 
-    moreFilterLink();
+  applyBtnMobile();
 
-    applyBtn();
+  closeBtnMobile();
 
-    applyBtnMobile();
-
-    closeBtnMobile();
 
 });
 
 // End of Document Load
 
+// Bedroom Filter Function
+var bedroomFilter = function(){
+  var selected_button;
+
+  $(".bedroom").on('click', function(e) {
+    e.preventDefault();
+
+    selected_button = e.target.value;
+
+    var cards = $(selected_button);
+    // console.log(cards);
+
+    var newContent = '<div class="row">';
+    for (var i = 0; i < cards.length; i++) {
+      newContent += '<div class = "col-sm-4 col-lg-4 col-md-4 ' + selected_button + ' animated fadeInDown">';
+      newContent += $(cards[i]).html();
+      newContent += '</div>';
+    }
+    newContent += '</div>';
+    $('#content .row').hide();
+
+    $(newContent).appendTo('#content');
+    $('.navbar-fixed-bottom').show();
+  });
+};
+
+// Price range filter function
+
+var priceRangeFilter = function() {
+  $("span").mouseup(function() {
+    var components = $('.container').find('.row').find('.card');
+    var min = Number($("#amount").text());
+    var max = Number($("#amount2").text());
+    var arr_card = [];
+    filter_check(components);
+    for (var i = 0; i < components.length; i++) {
+
+      var priceElement = $(components[i]).find('bdi');
+      var currency = Number(priceElement[0].innerText.replace(/[^0-9\.]+/g, ""));
+
+      if (currency >= min && currency <= max) {
+        arr_card.push(components[i]);
+      }
+    }
+    for (var i = 0; i < arr_card.length; i++) {
+      $(arr_card[i]).show();
+    }
+  });
+};
+
 // Hide the component on slider check
 
 var filter_check = function(input) {
-    for (var i = 0; i < input.length; i++) {
-        $(input[i]).hide()
-    }
-}
+  for (var i = 0; i < input.length; i++) {
+    $(input[i]).hide();
+  }
+};
 
 // Change the More <=> Less functionality on Click
 
 var moreLessCheck = function() {
-    var icon = '<i class="fa fa-chevron-down" aria-hidden="true"></i>'
-    $('#more-link').on('click', function() {
-        var link = $('#more-link')
-        if ($('#more-link')[0].innerText == " More") {
+  var icon = '<i class="fa fa-chevron-down" aria-hidden="true"></i>'
+  $('#more-link').on('click', function() {
+    var link = $('#more-link');
+    if ($('#more-link')[0].innerText == " More") {
 
-            $('.less').append(link.html('<i class="fa fa-chevron-up" aria-hidden="true"></i>' + " Less"))
+      $('.less').append(link.html('<i class="fa fa-chevron-up" aria-hidden="true"></i>' + " Less"));
 
-        } else {
-            var temp2 = $('#carpet').parent()[0]
-            $(temp2).append(link.html('<i class="fa fa-chevron-down" aria-hidden="true"></i>' + " More"))
+    } else {
+      var temp2 = $('#carpet').parent()[0];
+      $(temp2).append(link.html('<i class="fa fa-chevron-down" aria-hidden="true"></i>' + " More"));
 
 
-        }
-    })
-}
+    }
+  })
+};
 
 // More Filter link
+
 var moreFilterLink = function() {
-    $('#filter-link').on('click', function() {
-        $('#title-filter').removeClass("hidden")
-        $('#title-filter').show();
-        $('#filter-link').hide();
-        $('#reset-link').removeClass("reset-link-before-change");
-        $('#reset-link').addClass("reset-link-after-change");
-        $('#content').css({
-            'margin-bottom': '320px'
-        });
-    });
-}
+  $('#filter-link').on('click', function() {
+    $('#title-filter').removeClass("hidden");
+    $('#title-filter').show();
+    $('#filter-link').hide();
+    $('#reset-link').removeClass("reset-link-before-change");
+    $('#reset-link').addClass("reset-link-after-change");
+    $('#content').css({'margin-bottom': '320px'});
+  });
+};
 
 // Reset all the homepage
+
 var resetAll = function() {
-    location.reload();
-}
+  location.reload();
+};
 
 // Google Map
 
 var myMap = function() {
-    var mapCanvas = document.getElementById("map");
-    var mapOptions = {
-        center: new google.maps.LatLng(51.5, -0.2),
-        zoom: 10
-    };
-    var map = new google.maps.Map(mapCanvas, mapOptions);
-}
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2),
+    zoom: 10
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+};
 
 // Mobile filter handling
 
-var mobileFliterHandler = function(){
-  var windowWidth = $( window ).width()
+var mobileFliterHandler = function() {
+  var windowWidth = $(window).width();
   if (windowWidth <= 425) {
-    var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> FILTER '
+    var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> FILTER ';
     $('#filter-link').html(newFliterName)
 
     // change the view btn to see apts btn
-    $('.btn-secondary').text('See Apts') 
 
-    $('#filter-link').on('click',function(){
-    $('#fixed-filter').removeClass('hidden-xs');
-    $('#close-btn').removeClass('hidden');
+    $('.btn-secondary').text('See Apts');
 
-    $('#cancel-btn').on('click',function(e){
+    $('#filter-link').on('click', function() {
+      $('#fixed-filter').removeClass('hidden-xs');
+      $('#close-btn').removeClass('hidden');
+
+      $('#cancel-btn').on('click', function(e) {
         e.preventDefault();
         resetAll();
       });
 
     });
 
-  }else if (windowWidth <= 768) {
+  } else if (windowWidth <= 768) {
     var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> MORE FILTER '
     $('#filter-link').html(newFliterName)
 
-    $('#filter-link').on('click',function(){
-    $('#fixed-filter').removeClass('hidden-xs')
+    $('#filter-link').on('click', function() {
+      $('#fixed-filter').removeClass('hidden-xs');
 
-    $('#cancel-btn').on('click',function(e){
+      $('#cancel-btn').on('click', function(e) {
         e.preventDefault();
         resetAll();
       });
@@ -206,47 +209,48 @@ var mobileFliterHandler = function(){
     });
 
   }
-}
+};
 
 // Apply Button Desktop
-var applyBtn = function(){
-  $('#apply-btn').on('click',function(e){
+
+var applyBtn = function() {
+  $('#apply-btn').on('click', function(e) {
     e.preventDefault();
     $('#extendFilter').removeClass('panel-collapse collapse in');
     $('#extendFilter').addClass('panel-collapse collapse');
-    $('#filter-link').show()
+    $('#filter-link').show();
     $('#reset-link').removeClass("reset-link-after-change");
     $('#reset-link').addClass("reset-link-before-change");
     $('#title-filter').hide();
   })
-}
+};
+
 // Apply Button Mobile
-var applyBtnMobile = function(){
-  var windowWidth = $( window ).width()
+
+var applyBtnMobile = function() {
+  var windowWidth = $(window).width()
   if (windowWidth <= 425) {
-      $('#apply-btn').on('click',function(e){
+    $('#apply-btn').on('click', function(e) {
       e.preventDefault();
-      console.log('hhhhhh')
-      $('#fixed-filter').addClass('hidden-xs')
+      $('#fixed-filter').addClass('hidden-xs');
       $('#extendFilter').removeClass('panel-collapse collapse in');
       $('#extendFilter').addClass('panel-collapse collapse');
-      $('#close-btn').hide()
-  
+      $('#close-btn').hide();
+
     })
   }
-}
+};
 
 // Close Button Mobile 
 
-var closeBtnMobile = function(){
-  $('#close-btn').on('click',function(e){
+var closeBtnMobile = function() {
+  $('#close-btn').on('click', function(e) {
     e.preventDefault();
-    console.log('asds')
-     $('#fixed-filter').addClass('hidden-xs')
+    $('#fixed-filter').addClass('hidden-xs');
     $('#extendFilter').removeClass('panel-collapse collapse in');
     $('#extendFilter').addClass('panel-collapse collapse');
     $('#close-btn').addClass('hidden')
     $('#title-filter').hide();
     $('#filter-link').show();
   });
-}
+};

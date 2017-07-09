@@ -29,9 +29,32 @@
     <div id="content" class="container" >
       <!-- First ROW -->
       <div class="row">
-        <div class="col-sm-4 col-lg-4 col-md-4 studio  animated fadeInLeft">
+        <div class="col-sm-4 col-lg-4 col-md-4 bed_3  animated fadeInLeft">
           <div class="card">
             <div class="card-block">
+              <div class="special-banner">Specials</div>
+              <div class="panel-body text-center">
+                <p class="lead x">3 Bed - 2 Bath<bdo class="pipe"> | </bdo> 1250 sqft</p>
+                <p class="text-center location">Shangri-La</p>
+              </div>
+              <img class="img-responsive" src="images/plan_3.png" alt="">
+              <div>
+                <div class="caption">
+                  <br>
+                  <p class="center price">Starting at <bdi class="price-number">$1,825.00</bdi><sup>/month</sup>
+                  </p>
+                  <p class="center price">9 Available Now</p>
+                  <div class="text-center">
+                    <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="col-sm-4 col-lg-4 col-md-4 studio  animated fadeInLeft">
+          <div class="card">
+            <div class="card-block studio-card-tablet">
               <div class="special-banner">Specials</div>
               <div class="panel-body text-center">
                 <p class="lead">Studio<bdo class="pipe"> | </bdo> 850 sqft</p>
@@ -39,7 +62,7 @@
               </div>
               <img class="img-responsive" src="images/plan_1.png" alt="">
               <div>
-                <div class="caption">
+                <div class="caption studio-caption-tablet">
                   <br>
                   <p class="center price">Starting at <bdi class="price-number">$1,200.00</bdi><sup>/month</sup></p>
                   <p class="center price">Inquire for details</p>
@@ -65,29 +88,6 @@
                   <br>
                   <p class="center price">Starting at <bdi class="price-number">$1,650.00</bdi><sup>/month</sup></p>
                   <p class="center price">3 Available Now</p>
-                  <div class="text-center">
-                    <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 col-lg-4 col-md-4 bed_3  animated fadeInLeft">
-          <div class="card">
-            <div class="card-block">
-              <div class="special-banner">Specials</div>
-              <div class="panel-body text-center">
-                <p class="lead">3 Bed - 2 Bath<bdo class="pipe"> | </bdo> 1250 sqft</p>
-                <p class="text-center location">Shangri-La</p>
-              </div>
-              <img class="img-responsive" src="images/plan_3.png" alt="">
-              <div>
-                <div class="caption">
-                  <br>
-                  <p class="center price">Starting at <bdi class="price-number">$1,825.00</bdi><sup>/month</sup>
-                  </p>
-                  <p class="center price">9 Available Now</p>
                   <div class="text-center">
                     <button style="background-color: #efefef;" type="button" class="btn btn-secondary">View Details</button>
                   </div>
@@ -291,7 +291,7 @@
         </div>
         <div class="col-sm-4 col-lg-4 col-md-4 studio  animated fadeInLeft">
           <div class="card">
-            <div class="card-block">
+            <div class="card-block studio-card-tablet">
                <div class="special-banner">Specials</div>
               <div class="panel-body text-center">
                 <p class="lead">Studio<bdo class="pipe"> | </bdo> 200 sqft</p>
@@ -299,7 +299,7 @@
               </div>
               <img class="img-responsive" src="images/plan_12.png" alt="">
               <div>
-                <div class="caption">
+                <div class="caption studio-caption-tablet">
                   <br>
                   <p class="center price">Starting at <bdi class="price-number" >$525.00</bdi><sup>/month</sup></p>
                   <p class="center price">3 Available Now</p>
@@ -317,13 +317,14 @@
     </div>
     <!-- End Container -->
     <!-- Filter -->
-    <nav id="filter-nav" class="navbar-fixed-bottom hidden-tablet hidden-phone card">
+    <nav id="filter-nav" class="navbar-fixed-bottom card">
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading ">
             <h4 class="panel-title">
               <div>
                 <h4 id="title-filter"  class="hidden">Filter</h4>
+                <button id="close-btn" type="button" class="close hidden">&times;</button>
               </div>
               <a id="reset-link" class="hidden-xs reset-link-before-change" href="#" onClick="resetAll()">
               <i class="fa fa-times-circle" aria-hidden="true"></i> Reset All
@@ -392,18 +393,18 @@
                   <br>
                   <div class="row">
                     <div class="col-sm-6 col-lg-6 col-md-6">   
-                      <label class="form-check-label custom_lable">
+                      <label class="form-check-label custom-lable-checkbox">
                       <input class="form-check-input" type="checkbox" value="">  AIR CONDITIONING
                       </label>
-                      <label class="form-check-label custom_lable">
+                      <label class="form-check-label custom-lable-checkbox">
                       <input class="form-check-input" type="checkbox" value="">  PARKING
                       </label>
                     </div>
                     <div class="col-sm-6 col-lg-6 col-md-6">   
-                      <label class="form-check-label custom_lable">
+                      <label class="form-check-label custom-lable-checkbox">
                       <input class="form-check-input" type="checkbox" value="">  BALCONY
                       </label>
-                      <label id="carpet" class="form-check-label custom_lable">
+                      <label id="carpet" class="form-check-label custom-lable-checkbox">
                       <input class="form-check-input" type="checkbox" value="">  CARPET
                       </label>
                       <a id = "more-link" href="#more_check" data-toggle="collapse"><i class="fa fa-chevron-down" aria-hidden="true"></i> More</a>
@@ -412,24 +413,24 @@
                   <div id="more_check" class="collapse">
                     <div class="row">
                       <div class="col-sm-6 col-lg-6 col-md-6">   
-                        <label class="form-check-label custom_lable">
+                        <label class="form-check-label custom-lable-checkbox">
                         <input class="form-check-input" type="checkbox" value=""> SWIMMING POOL
                         </label>
-                        <label class="form-check-label custom_lable">
+                        <label class="form-check-label custom-lable-checkbox">
                         <input class="form-check-input" type="checkbox" value=""> INTERNET
                         </label>
-                        <label class="form-check-label custom_lable">
+                        <label class="form-check-label custom-lable-checkbox">
                         <input class="form-check-input" type="checkbox" value=""> HOT COFFEE
                         </label>
                       </div>
                       <div class="col-md-6 less">   
-                        <label class="form-check-label custom_lable">
+                        <label class="form-check-label custom-lable-checkbox">
                         <input class="form-check-input" type="checkbox" value=""> FIREPLACE
                         </label>
-                        <label class="form-check-label custom_lable">
+                        <label class="form-check-label custom-lable-checkbox">
                         <input class="form-check-input" type="checkbox" value=""> TV CABLE
                         </label>
-                        <label class="form-check-label custom_lable">
+                        <label class="form-check-label custom-lable-checkbox">
                         <input class="form-check-input" type="checkbox" value=""> TENNIS COURTS
                         </label>
                       </div>
@@ -440,7 +441,7 @@
             </div>
             <div class="panel-footer text-center">
               <button id="cancel-btn" class="btn btn-primary" onclick="resetAll()">Cancel</button>
-              <button id="apply-btn" class="btn btn-primary">Apply</button>
+              <button id="apply-btn" class="applybtn btn btn-primary"><i class="fa fa-check" aria-hidden="true"></i> Apply Filter</button>
             </div>
           </div>
         </div>

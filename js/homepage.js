@@ -17,8 +17,8 @@ $(document).ready(function() {
     max: 4000,
     values: [400, 4000],
     slide: function(event, ui) {
-      $("#amount").text(ui.values[0]);
-      $("#amount2").text(ui.values[1]);
+      $("#amount").html(ui.values[0]);
+      $("#amount2").html(ui.values[1]);
     }
   });
 
@@ -40,6 +40,7 @@ $(document).ready(function() {
   $("#amount2").change(function() {
     $("#slider-range").slider('values', 1, $(this).val());
   });
+
 
   // Transparent Filter
   $('nav').fadeTo(100, 0.9);

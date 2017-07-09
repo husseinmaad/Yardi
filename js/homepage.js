@@ -103,9 +103,7 @@ $(document).ready(function() {
 
     applyBtn();
 
-    $(".modal").on("hidden.bs.modal", function(){
-    $(".modal-body1").html("");
-});
+    applyBtnMobile();
 });
 // End of Document
 
@@ -198,6 +196,7 @@ var mobileFliterHandler = function(){
   }
 }
 
+// Apply Bottom Desktop
 var applyBtn = function(){
   $('#apply-btn').on('click',function(e){
     e.preventDefault();
@@ -208,4 +207,21 @@ var applyBtn = function(){
     $('#reset-link').addClass("reset-link-before-change");
     $('#title-filter').hide();
   })
+}
+// Apply Bottom Mobile
+var applyBtnMobile = function(){
+  var windowWidth = $( window ).width()
+  if (windowWidth <= 425) {
+    console.log(windowWidth)
+    $('#apply-btn').on('click',function(e){
+    e.preventDefault();
+   $('#fixed-filter').addClass('hidden-xs')
+    $('#extendFilter').removeClass('panel-collapse collapse in');
+    $('#extendFilter').addClass('panel-collapse collapse');
+
+  
+  })
+
+  }
+ 
 }

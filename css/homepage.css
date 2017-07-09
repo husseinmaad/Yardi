@@ -8,6 +8,10 @@ body {
 .center {
     text-align: center;
 }
+.details-btn
+{
+  background-color: #efefef;
+}
 .card_content {
     padding: 20px;
 }
@@ -143,7 +147,7 @@ label {
 }
 /*Handle the Tablet View*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 770px) {
     #filter-link {
         position: static;
         margin: 0px;
@@ -272,4 +276,9 @@ label {
         color: rgba(72, 37, 3, 0.99);
     }
 }
-/*End of Mobile Media Query
+/*End of Mobile Media Query*/
+
+.btn.btn-secondary{
+  background-color: #efefef;
+  text-transform: capitalize;
+}

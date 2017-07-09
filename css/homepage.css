@@ -1,38 +1,30 @@
+/*Home Page CSS Style Costume Classes*/
+
+
 body {
     font-family: 'Roboto';
     font-size: 22px;
 }
-
-.startfont {
-    font-size: 12px;
-}
-
 .center {
     text-align: center;
 }
-
 .card_content {
     padding: 20px;
 }
-
 sup {
     vertical-align: super;
     font-size: smaller;
 }
-
 .img_size {
     width: 180px;
     height: 150px;
 }
-
 .panel {
     border: 0px;
 }
-
 .panel-body {
     padding: 10px 15px;
 }
-
 label {
     display: block;
 }
@@ -40,18 +32,14 @@ label {
     color: #A2A2A2;
     font-size: 11px;
 }
-
 .price-number {
     font-size: 17px;
     color: #2185ef;
 }
-
-
 #content {
     margin-bottom: 120px;
     margin-top: 30px;
 }
-
 #filter-link {
     position: absolute;
     margin: 20px 30px;
@@ -59,20 +47,15 @@ label {
     color: #2185ef;
     font-size: 12px;
 }
-
-
-
 .btn {
     border-radius: 0;
     font-size: 12px;
 }
-
 .btn-group>.btn.active {
     background-color: #4787be;
     color: white;
 }
-
-
+/*Change special-banner class*/
 .special-banner {
     position: absolute;
     right: 2px;
@@ -85,7 +68,7 @@ label {
     text-align: center;
     background-color: #fffbfb;
     border: 0;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 2px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 2px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     display: block;
     margin-bottom: .75rem;
     margin-top: 10px;
@@ -99,27 +82,24 @@ label {
     border-right-style: solid;
     border-right-width: 15px;
     border-right-color: cornsilk;
-}   
-
+}
+/*Change btn-group font color */
 .btn-group>.btn {
     color: #757779;
 }
-
 #title-filter {
     font-size: 15px;
     font-weight: lighter;
     margin-bottom: 25px;
 }
-
-.reset-link-before-change{
+.reset-link-before-change {
     position: absolute;
     margin: 20px 30px;
     right: 100px;
     color: #2185ef;
     font-size: 10px;
 }
-
-.reset-link-after-change{
+.reset-link-after-change {
     position: absolute;
     margin: 20px 30px;
     right: 10px;
@@ -127,41 +107,42 @@ label {
     color: #2185ef;
     font-size: 10px;
 }
-/*fix the color because its inherit the original color */
-.panel-title>a{
+/*Fix the color because its inherit the original color */
+
+.panel-title>a {
     color: #2185ef;
 }
-
-.lead{
-  font-size:18px;
-  margin-bottom: 5px;
-  margin-right: 12px;
+.lead {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-right: 12px;
 }
-
-.location{
+.location {
     font-size: 13px;
     color: #828989;
     margin-bottom: 0px;
     font-family: "Raleway", sans-serif;
     font-weight: 400;
-
 }
 .pipe {
     color: #A2A2A2;
     margin-left: 6px;
     margin-right: 6px;
 }
-.price{
-   color: #A2A2A2;
-   font-size: 11px;
+.price {
+    color: #A2A2A2;
+    font-size: 11px;
 }
-
-.custom-lable-checkbox{
+.custom-lable-checkbox {
     color: #A2A2A2;
     font-size: 10px;
 }
-
+.btn.btn-primary.black {
+    color: #020202;
+    border-color: #ccc;
+}
 /*Handle the Tablet View*/
+
 @media only screen and (max-width: 700px) {
     #filter-link {
         position: static;
@@ -174,58 +155,53 @@ label {
         text-align: center;
     }
     p.location {
-    font-size: 12px;
-    color: #946460;
-    margin-bottom: 0px;
-    font-weight: 300;
-  }
-  p.lead{
-    font-size:15px;
-    color: #634e42; 
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-  }
-  p.price{
-   color: #A2A2A2;
-   font-size: 12px;
-   font-weight: 100;
-  }
-  bdi.price-number {
-    font-size: 15px;
-    color: #2185ef;
-    font-weight: 100;
-  }
-  .btn-group{
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 200px;
+        font-size: 12px;
+        color: #946460;
+        margin-bottom: 0px;
+        font-weight: 300;
+    }
+    p.lead {
+        font-size: 15px;
+        color: #634e42;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: lighter;
+    }
+    p.price {
+        color: #A2A2A2;
+        font-size: 12px;
+        font-weight: 100;
+    }
+    bdi.price-number {
+        font-size: 15px;
+        color: #2185ef;
+        font-weight: 100;
+    }
+    .btn-group {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 200px;
+    }
+    .ipad-filter-div-shift {
+        position: relative;
+        left: 25px;
+    }
+    .studio-card-tablet {
+        height: 352px;
+    }
+    .studio-caption-tablet {
+        margin-top: 22px;
+    }
+    .reset-link-before-change {
+        position: absolute;
+        margin: 20px 30px;
+        right: 8px;
+        color: #2185ef;
+        font-size: 10px;
+    }
 }
-  .ipad-filter-div-shift{
-      position: relative;
-      left: 25px;
-  }
-  .studio-card-tablet{
-    height: 352px;
-  }
-  .studio-caption-tablet{
-     margin-top: 22px;
-  }
-  .reset-link-before-change {
-    position: absolute;
-    margin: 20px 30px;
-    right: 8px;
-    color: #2185ef;
-    font-size: 10px;
-}
- 
-}
-
-.applybtn:hover {
-    background-color: yellow;
-}
-
 /*Handle the Mobile View*/
+
 @media only screen and (max-width: 425px) {
     #filter-link {
         position: static;
@@ -238,74 +214,62 @@ label {
         text-align: center;
     }
     p.location {
-    font-size: 18px;
-    color: #946460;
-    margin-bottom: 0px;
-    font-weight: 300;
-  }
-  p.lead{
-    font-size:20px;
-    color: #634e42; 
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-  }
-  p.price{
-   color: #A2A2A2;
-   font-size: 14px;
-   font-family: "Raleway", sans-serif;
-   font-weight: 100;
-
-  }
-  bdi.price-number {
-    font-size: 20px;
-    color: #2185ef;
-    font-weight: 100;
-  }
-  #title-filter
-  {
-    position: relative;
-    right: 155px;
-  }
-  div.studio-card-tablet
-  {
-     height: 504px;
-  }
-     
- #close-btn
- {
-  position: relative;
-    bottom: 42px;
-    right: 12px;
- }
- #filter-link{
-  color: #60300b;
-  font-weight: normal;
- }
- .btn.btn-primary.black{
-    color: #020202;
-    background-color: inherit;
-    border-color: #ccc;
+        font-size: 18px;
+        color: #946460;
+        margin-bottom: 0px;
+        font-weight: 300;
+    }
+    p.lead {
+        font-size: 20px;
+        color: #634e42;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+    }
+    p.price {
+        color: #A2A2A2;
+        font-size: 14px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 100;
+    }
+    bdi.price-number {
+        font-size: 20px;
+        color: #2185ef;
+        font-weight: 100;
+    }
+    #title-filter {
+        position: relative;
+        right: 155px;
+    }
+    div.studio-card-tablet {
+        height: 504px;
+    }
+    #close-btn {
+        position: relative;
+        bottom: 42px;
+        right: 12px;
+    }
+    #filter-link {
+        color: #60300b;
+        font-weight: normal;
+    }
+    .btn.btn-primary.black {
+        color: #020202;
+        background-color: inherit;
+        border-color: #ccc;
+    }
+    div.ipad-filter-div-shift {
+        position: relative;
+        left: 0px;
+    }
+    .btn.btn-secondary {
+        background-color: #efefef;
+        width: 130px;
+        height: 60px;
+        font-size: 18px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 100;
+        text-transform: capitalize;
+        color: rgba(72, 37, 3, 0.99);
+    }
 }
-
-
-div.ipad-filter-div-shift {
-    position: relative;
-    left: 0px;
-  }
-
-  .btn.btn-secondary
-  {
-    background-color: #efefef;
-    width: 130px;
-    height: 60px;
-    font-size: 18px;
-   font-family: "Raleway", sans-serif;
-   font-weight: 100;
-    text-transform:capitalize;
-    color: rgba(72, 37, 3, 0.99);
-  }
-
-}
-/*End of Mobile Media Query*/
-
-
+/*End of Mobile Media Query

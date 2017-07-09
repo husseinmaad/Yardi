@@ -61,63 +61,10 @@ label {
 }
 
 
-/*Handle the Mobile View*/
-@media only screen and (max-width: 425px) {
-    #filter-link {
-        position: static;
-        margin: 0px;
-        color: gray;
-        font-size: 20px;
-        font-weight: 100;
-    }
-    .panel-title {
-        text-align: center;
-    }
-    p.location {
-    font-size: 18px;
-    color: #946460;
-    margin-bottom: 0px;
-    font-weight: 300;
-  }
-  p.lead{
-    font-size:20px;
-    color: #634e42; 
-    font-family: 'Open Sans', sans-serif;
-    font-weight: lighter;
-  }
-  p.price{
-   color: #A2A2A2;
-   font-size: 14px;
-   font-weight: 100;
-  }
-  bdi.price-number {
-    font-size: 20px;
-    color: #2185ef;
-    font-weight: 100;
-  }
-  #title-filter
-  {
-    position: relative;
-    right: 155px;
-  }
-  div.studio-card-tablet
-  {
-     height: 460px;
-  }
-     
- #close-btn
- {
-  position: relative;
-    bottom: 42px;
-    right: 12px;
- }
-}
-/*End of Mobile Media Query*/
-
 
 .btn {
     border-radius: 0;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .btn-group>.btn.active {
@@ -262,7 +209,89 @@ label {
   .studio-caption-tablet{
      margin-top: 22px;
   }
+  .reset-link-before-change {
+    position: absolute;
+    margin: 20px 30px;
+    right: 8px;
+    color: #2185ef;
+    font-size: 10px;
+}
  
 }
+
+.applybtn:hover {
+    background-color: yellow;
+}
+
+/*Handle the Mobile View*/
+@media only screen and (max-width: 425px) {
+    #filter-link {
+        position: static;
+        margin: 0px;
+        color: gray;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    .panel-title {
+        text-align: center;
+    }
+    p.location {
+    font-size: 18px;
+    color: #946460;
+    margin-bottom: 0px;
+    font-weight: 300;
+  }
+  p.lead{
+    font-size:20px;
+    color: #634e42; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+  }
+  p.price{
+   color: #A2A2A2;
+   font-size: 14px;
+   font-weight: 100;
+  }
+  bdi.price-number {
+    font-size: 20px;
+    color: #2185ef;
+    font-weight: 100;
+  }
+  #title-filter
+  {
+    position: relative;
+    right: 155px;
+  }
+  div.studio-card-tablet
+  {
+     height: 504px;
+  }
+     
+ #close-btn
+ {
+  position: relative;
+    bottom: 42px;
+    right: 12px;
+ }
+
+div.ipad-filter-div-shift {
+    position: relative;
+    left: 0px;
+  }
+
+  .btn-secondary
+  {
+    background-color: #efefef;
+    width: 120px;
+    height: 50px;
+    font-size: 22px;
+    font-weight: 100;
+    text-transform:capitalize;
+  }
+  .x {font-size: 20px;}
+
+}
+/*End of Mobile Media Query*/
+
 
 

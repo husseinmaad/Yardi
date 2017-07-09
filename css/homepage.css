@@ -275,6 +275,14 @@ label {
         text-transform: capitalize;
         color: rgba(72, 37, 3, 0.99);
     }
+    #amount{
+      position: relative;
+      top: 12px;
+    }
+    #amount2{
+      position: relative;
+      left: 330px;
+    }
 }
 /*End of Mobile Media Query*/
 

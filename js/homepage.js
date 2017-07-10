@@ -1,5 +1,6 @@
+
 $(document).ready(function() {
-  const SELECTED_BEDROOM_FILTER = '';
+
   var components = $('.container').find('.row').find('.card').parent();
   bedroomFilter();
 
@@ -74,7 +75,6 @@ var bedroomFilter = function(){
     e.preventDefault();
 
     selected_button = e.target.value;
-    SELECTED_BEDROOM_FILTER = selected_button
 
     var cards = $(selected_button);
     var newContent = '<div class="row">';
@@ -94,16 +94,8 @@ var bedroomFilter = function(){
 // Price range filter function
 
 var priceRangeFilter = function(components) {
-    x = SELECTED_BEDROOM_FILTER
-  $("span").mouseup(function() {
-    var filterComponents = $('.container').find('.row').find('.card').parent();
-    
-    console.log(components)
-    if (x != "") {
-      components = filterComponents;
-    }
-    console.log(components)
 
+  $("span").mouseup(function() {
     var min = Number($("#amount").text());
     var max = Number($("#amount2").text());
     var arr_card = [];

@@ -351,7 +351,7 @@ label {
     a.btn.chat{
         background-color: #602c0e;
         position: absolute;
-        left: 280px;
+        left: 265px;
         bottom: 60px;
         width: 60px;
         height: 50px;
@@ -361,3 +361,16 @@ label {
 }
 /*End of Mobile Media Query*/
 
+/*Small Screen mobile */
+@media only screen and (max-width: 320px){
+    a.btn.chat{
+        background-color: #602c0e;
+        position: absolute;
+        left: 220px;
+        bottom: 60px;
+        width: 50px;
+        height: 40px;
+        border: 0;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 2px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    }
+}

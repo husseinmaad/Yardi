@@ -209,7 +209,7 @@ var mobileFliterHandler = function() {
 
     });
 
-  } else if (windowWidth <= 768) {
+  } else if (windowWidth <= 770) {
     var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> MORE FILTER '
     $('#filter-link').html(newFliterName)
     $('.chat').addClass('hidden');

@@ -1,58 +1,33 @@
-
 $(document).ready(function() {
 
   var components = $('.container').find('.row').find('.card').parent();
-  bedroomFilter();
 
   // Initiate the wow js
   new WOW().init();
 
-  // Date Picker function
-  $(function() {
-    $('#datetimepicker1').datepicker();
-  });
+  // Bedroom Filter Function
+  bedroomFilter();
+  // Price Range Slider 
+  drawRentFilterSlider();
 
   // Price Range Slider 
-  $("#slider-range").slider({
-    range: true,
-    min: 400,
-    max: 4000,
-    values: [400, 4000],
-    slide: function(event, ui) {
-      $("#amount").html(ui.values[0]);
-      $("#amount2").html(ui.values[1]);
-    }
-  });
+  drawSqftFilterSlider();
 
-  $("#slider-range1").slider({
-    range: true,
-    min: 400,
-    max: 4000,
-    values: [400, 4000],
-    slide: function(event, ui) {
-
-    }
-  });
-
-  $("#amount").change(function() {
-
-    $("#slider-range").slider('values', 0, $(this).val());
-  });
-
-  $("#amount2").change(function() {
-    $("#slider-range").slider('values', 1, $(this).val());
-  });
-
+  // Rent Amount Change
+  rentFilterAmount();
+ 
+  // Date Picker function
+  datePicker();
 
   // Transparent Filter
-  $('nav').fadeTo(100, 0.9);
+    $('nav').fadeTo(100, 0.9);
 
-
+  // Change the More <=> Less
+  moreLessCheck();
+  
   priceRangeFilter(components);
 
   mobileFliterHandler();
-
-  moreLessCheck();
 
   moreFilterLink();
 
@@ -64,11 +39,57 @@ $(document).ready(function() {
 
 
 });
-
 // End of Document Load
 
+// Price Range Slider 
+var drawRentFilterSlider = function() {
+  $("#slider-range").slider({
+    range: true,
+    min: 400,
+    max: 4000,
+    values: [400, 4000],
+    slide: function(event, ui) {
+      $("#amount").html(ui.values[0]);
+      $("#amount2").html(ui.values[1]);
+    }
+  });
+}
+
+
+// SQFT Range Slider 
+var drawSqftFilterSlider = function() {
+  $("#slider-range1").slider({
+    range: true,
+    min: 400,
+    max: 4000,
+    values: [400, 4000],
+    slide: function(event, ui) {
+
+    }
+  });
+}
+
+var rentFilterAmount = function() {
+  $("#amount").change(function() {
+
+    $("#slider-range").slider('values', 0, $(this).val());
+  });
+
+  $("#amount2").change(function() {
+    $("#slider-range").slider('values', 1, $(this).val());
+  });
+}
+
+// Date Picker
+
+var datePicker = function() {
+  $(function() {
+    $('#datetimepicker1').datepicker();
+  });
+}
+
 // Bedroom Filter Function
-var bedroomFilter = function(){
+var bedroomFilter = function() {
   var selected_button;
 
   $(".bedroom").on('click', function(e) {
@@ -110,15 +131,16 @@ var priceRangeFilter = function(components) {
         arr_card.push(components[i]);
       }
     }
-    console.log(arr_card)
     var newContent = '<div class="row">';
     for (var i = 0; i < arr_card.length; i++) {
-      newContent+= arr_card[i].outerHTML
+      newContent += arr_card[i].outerHTML
     }
-    newContent+= '</div>'
+    newContent += '</div>'
     $('#content .row').hide();
     $('#content').html(newContent)
-    $("html, body").animate({ scrollTop: 0 }, 600);
+    $("html, body").animate({
+      scrollTop: 0
+    }, 600);
     newContent = "";
     arr_card = [];
   });
@@ -153,7 +175,9 @@ var moreFilterLink = function() {
     $('#filter-link').hide();
     $('#reset-link').removeClass("reset-link-before-change");
     $('#reset-link').addClass("reset-link-after-change");
-    $('#content').css({'margin-bottom': '320px'});
+    $('#content').css({
+      'margin-bottom': '320px'
+    });
   });
 };
 
@@ -175,7 +199,7 @@ var mobileFliterHandler = function() {
     // change the view btn to see apts btn
 
     $('.btn-secondary').text('See Apts');
-
+    $('.chat').removeClass('hidden');
     $('#filter-link').on('click', function() {
       $('#fixed-filter').removeClass('hidden-xs');
       $('#close-btn').removeClass('hidden');
@@ -187,9 +211,10 @@ var mobileFliterHandler = function() {
 
     });
 
-  } else if (windowWidth <= 768) {
+  } else if (windowWidth <= 770) {
     var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> MORE FILTER '
     $('#filter-link').html(newFliterName)
+    $('.chat').addClass('hidden');
 
     $('#filter-link').on('click', function() {
       $('#fixed-filter').removeClass('hidden-xs');

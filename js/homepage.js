@@ -8,40 +8,16 @@ $(document).ready(function() {
   new WOW().init();
 
   // Date Picker function
-  $(function() {
-    $('#datetimepicker1').datepicker();
-  });
+  
 
   // Price Range Slider 
-  $("#slider-range").slider({
-    range: true,
-    min: 400,
-    max: 4000,
-    values: [400, 4000],
-    slide: function(event, ui) {
-      $("#amount").html(ui.values[0]);
-      $("#amount2").html(ui.values[1]);
-    }
-  });
+    drawRentFilterSlider();
 
-  $("#slider-range1").slider({
-    range: true,
-    min: 400,
-    max: 4000,
-    values: [400, 4000],
-    slide: function(event, ui) {
-
-    }
-  });
-
-  $("#amount").change(function() {
-
-    $("#slider-range").slider('values', 0, $(this).val());
-  });
-
-  $("#amount2").change(function() {
-    $("#slider-range").slider('values', 1, $(this).val());
-  });
+  // Price Range Slider 
+    drawSqftFilterSlider();
+  // Rent Amount Change
+    rentFilterAmount();
+  
 
 
   // Transparent Filter
@@ -64,8 +40,54 @@ $(document).ready(function() {
 
 
 });
-
 // End of Document Load
+
+// Price Range Slider 
+var drawRentFilterSlider = function(){
+  $("#slider-range").slider({
+    range: true,
+    min: 400,
+    max: 4000,
+    values: [400, 4000],
+    slide: function(event, ui) {
+      $("#amount").html(ui.values[0]);
+      $("#amount2").html(ui.values[1]);
+    }
+  });
+}
+
+
+// SQFT Range Slider 
+var drawSqftFilterSlider = function(){
+  $("#slider-range1").slider({
+    range: true,
+    min: 400,
+    max: 4000,
+    values: [400, 4000],
+    slide: function(event, ui) {
+
+    }
+  });
+}
+
+var rentFilterAmount = function(){
+  $("#amount").change(function() {
+
+    $("#slider-range").slider('values', 0, $(this).val());
+  });
+
+  $("#amount2").change(function() {
+    $("#slider-range").slider('values', 1, $(this).val());
+  });
+}
+
+// Date Picker
+
+var datePicker = function(){
+  $(function() {
+    $('#datetimepicker1').datepicker();
+  });
+}
 
 // Bedroom Filter Function
 var bedroomFilter = function(){
@@ -175,7 +197,7 @@ var mobileFliterHandler = function() {
     // change the view btn to see apts btn
 
     $('.btn-secondary').text('See Apts');
-
+    $('.chat').removeClass('hidden');
     $('#filter-link').on('click', function() {
       $('#fixed-filter').removeClass('hidden-xs');
       $('#close-btn').removeClass('hidden');
@@ -190,6 +212,7 @@ var mobileFliterHandler = function() {
   } else if (windowWidth <= 768) {
     var newFliterName = '<i class="fa fa-filter " aria-hidden="true"></i> MORE FILTER '
     $('#filter-link').html(newFliterName)
+    $('.chat').addClass('hidden');
 
     $('#filter-link').on('click', function() {
       $('#fixed-filter').removeClass('hidden-xs');

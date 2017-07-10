@@ -1,5 +1,6 @@
+
 $(document).ready(function() {
-  const SELECTED_BEDROOM_FILTER = '';
+
   var components = $('.container').find('.row').find('.card').parent();
   bedroomFilter();
 
@@ -74,7 +75,6 @@ var bedroomFilter = function(){
     e.preventDefault();
 
     selected_button = e.target.value;
-    SELECTED_BEDROOM_FILTER = selected_button
 
     var cards = $(selected_button);
     var newContent = '<div class="row">';
@@ -94,16 +94,8 @@ var bedroomFilter = function(){
 // Price range filter function
 
 var priceRangeFilter = function(components) {
-    x = SELECTED_BEDROOM_FILTER
-  $("span").mouseup(function() {
-    var filterComponents = $('.container').find('.row').find('.card').parent();
-    
-    console.log(components)
-    if (x != "") {
-      components = filterComponents;
-    }
-    console.log(components)
 
+  $("span").mouseup(function() {
     var min = Number($("#amount").text());
     var max = Number($("#amount2").text());
     var arr_card = [];
@@ -124,21 +116,14 @@ var priceRangeFilter = function(components) {
       newContent+= arr_card[i].outerHTML
     }
     newContent+= '</div>'
-     $('#content .row').hide();
+    $('#content .row').hide();
     $('#content').html(newContent)
-     $("html, body").animate({ scrollTop: 0 }, 600);
+    $("html, body").animate({ scrollTop: 0 }, 600);
     newContent = "";
     arr_card = [];
   });
 };
 
-// Hide the component on slider check
-
-// var filter_check = function(input) {
-//   for (var i = 0; i < input.length; i++) {
-//     $(input[i]).parent().hide();
-//   }
-// };
 
 // Change the More <=> Less functionality on Click
 
@@ -178,16 +163,6 @@ var resetAll = function() {
   location.reload();
 };
 
-// Google Map
-
-var myMap = function() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2),
-    zoom: 10
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-};
 
 // Mobile filter handling
 

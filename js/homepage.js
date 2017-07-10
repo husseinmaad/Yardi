@@ -61,7 +61,7 @@ $(document).ready(function() {
   applyBtnMobile();
 
   closeBtnMobile();
-
+  
 
 });
 
@@ -124,13 +124,6 @@ var priceRangeFilter = function(components) {
   });
 };
 
-// Hide the component on slider check
-
-// var filter_check = function(input) {
-//   for (var i = 0; i < input.length; i++) {
-//     $(input[i]).parent().hide();
-//   }
-// };
 
 // Change the More <=> Less functionality on Click
 
@@ -170,16 +163,6 @@ var resetAll = function() {
   location.reload();
 };
 
-// Google Map
-
-var myMap = function() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2),
-    zoom: 10
-  };
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-};
 
 // Mobile filter handling
 

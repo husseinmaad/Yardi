@@ -48,7 +48,7 @@
                   </p>
                   <p class="center price">1 Available Now</p>
                   <div class="text-center">
-                    <button type="button" class="btn btn-secondary">View Details</button>
+                    <button id="x" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">View Details</button>
                   </div>
                 </div>
               </div>
@@ -452,7 +452,7 @@
       </div>
     </nav>
     <!-- END Filter --> 
-    <!-- Map Modal -->
+    <!-- Modal Design for View Details Btn we can include more -->
     <div id="myModal" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <!-- Map Modal content-->
@@ -462,28 +462,26 @@
             <h4 class="modal-title">Apartment Location</h4>
           </div>
           <div class="modal-body">
-            <div id="map" style="width:400px;height:400px;background:yellow"></div>
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-        <!-- End Map Modal content-->
+        <!-- End Modal content-->
       </div>
     </div>
     <!-- End Map Modal -->
-   </body>
-   <!-- JS Libraries -->
-   <!-- jQuery /UI library -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+  </body>
+  <!-- JS Libraries -->
+  <!-- jQuery /UI library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
 
-   <!-- Latest compiled JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <script type="text/javascript" src="js/homepage.js"></script>
-
-   <!-- Map Script-->
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1wYBQWDjquHDBGVpWHP95Iej2yHSlPPU&callback=myMap"></script>
-   <script src="js/wow.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/homepage.js"></script>
+  <!-- WoW JS -->
+  <script src="js/wow.min.js"></script>
 
 </html>

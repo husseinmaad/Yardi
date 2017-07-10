@@ -1,5 +1,6 @@
 $(document).ready(function() {
-
+  const SELECTED_BEDROOM_FILTER = '';
+  var components = $('.container').find('.row').find('.card').parent();
   bedroomFilter();
 
   // Initiate the wow js
@@ -46,7 +47,7 @@ $(document).ready(function() {
   $('nav').fadeTo(100, 0.9);
 
 
-  priceRangeFilter();
+  priceRangeFilter(components);
 
   mobileFliterHandler();
 
@@ -73,10 +74,9 @@ var bedroomFilter = function(){
     e.preventDefault();
 
     selected_button = e.target.value;
+    SELECTED_BEDROOM_FILTER = selected_button
 
     var cards = $(selected_button);
-    // console.log(cards);
-
     var newContent = '<div class="row">';
     for (var i = 0; i < cards.length; i++) {
       newContent += '<div class = "col-sm-4 col-lg-4 col-md-4 ' + selected_button + ' animated fadeInDown">';
@@ -93,13 +93,22 @@ var bedroomFilter = function(){
 
 // Price range filter function
 
-var priceRangeFilter = function() {
+var priceRangeFilter = function(components) {
+    x = SELECTED_BEDROOM_FILTER
   $("span").mouseup(function() {
-    var components = $('.container').find('.row').find('.card');
+    var filterComponents = $('.container').find('.row').find('.card').parent();
+    
+    console.log(components)
+    if (x != "") {
+      components = filterComponents;
+    }
+    console.log(components)
+
     var min = Number($("#amount").text());
     var max = Number($("#amount2").text());
     var arr_card = [];
-    filter_check(components);
+    // filter_check(components);
+
     for (var i = 0; i < components.length; i++) {
 
       var priceElement = $(components[i]).find('bdi');
@@ -109,19 +118,27 @@ var priceRangeFilter = function() {
         arr_card.push(components[i]);
       }
     }
+    console.log(arr_card)
+    var newContent = '<div class="row">';
     for (var i = 0; i < arr_card.length; i++) {
-      $(arr_card[i]).show();
+      newContent+= arr_card[i].outerHTML
     }
+    newContent+= '</div>'
+     $('#content .row').hide();
+    $('#content').html(newContent)
+     $("html, body").animate({ scrollTop: 0 }, 600);
+    newContent = "";
+    arr_card = [];
   });
 };
 
 // Hide the component on slider check
 
-var filter_check = function(input) {
-  for (var i = 0; i < input.length; i++) {
-    $(input[i]).hide();
-  }
-};
+// var filter_check = function(input) {
+//   for (var i = 0; i < input.length; i++) {
+//     $(input[i]).parent().hide();
+//   }
+// };
 
 // Change the More <=> Less functionality on Click
 

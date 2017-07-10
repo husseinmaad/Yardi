@@ -61,7 +61,7 @@ $(document).ready(function() {
   applyBtnMobile();
 
   closeBtnMobile();
-  
+
 
 });
 
@@ -116,9 +116,9 @@ var priceRangeFilter = function(components) {
       newContent+= arr_card[i].outerHTML
     }
     newContent+= '</div>'
-     $('#content .row').hide();
+    $('#content .row').hide();
     $('#content').html(newContent)
-     $("html, body").animate({ scrollTop: 0 }, 600);
+    $("html, body").animate({ scrollTop: 0 }, 600);
     newContent = "";
     arr_card = [];
   });
